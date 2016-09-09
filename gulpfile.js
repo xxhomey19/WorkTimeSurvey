@@ -144,6 +144,8 @@ gulp.task('make:postcss', ['make:import'], function() {
 
 gulp.task('make:dependencies', function() {
 	return gulp.src([
+		src.libs + 'jquery.min.js',
+		src.libs + 'jquery-ui.min.js',
 		src.libs + '**/*.js'
 	])
 	.pipe(concat('dependencies.js'))
